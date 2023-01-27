@@ -25,7 +25,7 @@ function onInputCountry(e) {
       .then(data => {
         if (data.length === 1) {
           return (countryInfo.innerHTML = createCardCountry(data));
-        } else if (data.length <= 10 && data.length >= 2) {
+        } else if (data.length >= 2 && data.length <= 10) {
           return (countryList.innerHTML = createListCountries(data));
         }
         return Notify.info(
